@@ -1,0 +1,5 @@
+{
+  "CORS": {
+    "Domains": "http://asset.com,https://asset.com,http://localhost:4200"
+  }
+} 

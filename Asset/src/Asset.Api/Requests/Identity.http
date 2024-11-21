@@ -1,0 +1,144 @@
+@Asset.Api_HostAddress = http://localhost:44318
+
+### Create User
+POST {{Asset.Api_HostAddress}}/api/v1/auth/accounts/create-user
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "username": "johndoe",
+  "email": "john@example.com",
+  "password": "password123",
+  "confirmPassword": "password123"
+}
+
+###
+
+### Get All Users
+GET {{Asset.Api_HostAddress}}/api/v1/auth/accounts/users?SearchTerm=&SortColumn=username&Ascending=true&PageNumber=1&PageSize=10
+Accept: application/json
+
+###
+
+### Get User by ID
+GET {{Asset.Api_HostAddress}}/api/v1/auth/accounts/user/1
+Accept: application/json
+
+###
+
+### Confirm Email
+GET {{Asset.Api_HostAddress}}/api/v1/auth/accounts/confirm-email?UserId=1&Token=some-confirmation-token
+Accept: application/json
+
+###
+
+### Send Confirmation Email
+POST {{Asset.Api_HostAddress}}/api/v1/auth/accounts/send-confirmation-email?email=john@example.com
+Accept: application/json
+
+###
+
+### Get Token
+POST {{Asset.Api_HostAddress}}/api/v1/auth/auth/get-token
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userName": "info@cyberkemet.com",
+  "password": "kemet123",
+  "companyId": "10"
+}
+
+###
+
+### Refresh Token
+POST {{Asset.Api_HostAddress}}/api/v1/auth/auth/refresh-token
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "some-refresh-token"
+}
+
+###
+
+### Revoke Token
+POST {{Asset.Api_HostAddress}}/api/v1/auth/auth/revoke-token
+Content-Type: application/json
+Accept: application/json
+
+{
+  "token": "some-refresh-token"
+}
+
+###
+
+### Add User Role
+POST {{Asset.Api_HostAddress}}/api/v1/auth/auth/add-user-role
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": "1",
+  "role": "Admin"
+}
+
+###
+
+### Remove User Role
+POST {{Asset.Api_HostAddress}}/api/v1/auth/auth/remove-user-role
+Content-Type: application/json
+Accept: application/json
+
+{
+  "userId": "1",
+  "role": "Admin"
+}
+
+###
+
+### Create Product Master
+POST {{Asset.Api_HostAddress}}/api/v1/pos/productmaster
+Content-Type: application/json
+Accept: application/json
+
+{
+  "localBarcode": "123456789",
+  "publicBarcode": "987654321",
+  "name": "Product Name",
+  "isActive": true
+}
+
+###
+
+### Get All Product Masters
+GET {{Asset.Api_HostAddress}}/api/v1/pos/productmaster?SearchTerm=&SortColumn=name&Ascending=true&PageNumber=1&PageSize=10
+Accept: application/json
+
+###
+
+### Get Product Master by ID
+GET {{Asset.Api_HostAddress}}/api/v1/pos/productmaster/1
+Accept: application/json
+
+###
+
+### Update Product Master by ID
+PUT {{Asset.Api_HostAddress}}/api/v1/pos/productmaster/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "localBarcode": "123456789",
+  "publicBarcode": "987654321",
+  "name": "Updated Product Name",
+  "isActive": false
+}
+
+###
+
+### Delete Product Master by ID
+DELETE {{Asset.Api_HostAddress}}/api/v1/pos/productmaster/1
+Accept: application/json

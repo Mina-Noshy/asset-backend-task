@@ -1,0 +1,9 @@
+{
+  "JWT": {
+    "Secret": "SUPER-SECRET-KEY-6FDFBB8F-2909-4565-85EA-3F685784355E",
+    "ExpiryMinutes": 60,
+    "Issuer": "asset-issuer",
+    "Audience": "asset-audience",
+    "RefreshTokenExpirationInDays": 10
+  }
+} 

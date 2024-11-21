@@ -1,0 +1,11 @@
+{
+  "SMTP": {
+    "Host": "smtp.asset.com",
+    "Port": 587,
+    "EnableSsl": true,
+    "Username": "info@asset.com",
+    "Password": "xxxxxxxxxxx",
+    "SenderName": "Asset",
+    "SenderEmail": "info@asset.com"
+  }
+}

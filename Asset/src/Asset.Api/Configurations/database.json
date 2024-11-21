@@ -1,0 +1,6 @@
+{
+  "ConnectionStrings": {
+    "LiveCS": "Data Source=CYBERKEMET; Initial Catalog=Asset; Integrated Security=True; MultipleActiveResultSets=True; TrustServerCertificate=True; Connect Timeout=600;",
+    "DevCS": "Data Source=CYBERKEMET; Initial Catalog=Asset; Integrated Security=True; MultipleActiveResultSets=True; TrustServerCertificate=True; Connect Timeout=600;"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "RateLimiter": {
+    "Requests": 5,
+    "Duration": 10
+  }
+} 
